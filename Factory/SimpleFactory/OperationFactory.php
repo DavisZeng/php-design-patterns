@@ -18,7 +18,7 @@ class OperationFactory
     const OPERATION_SUB = 0x02;
     const OPERATION_MUL = 0x03;
 
-    public static function calc($type)
+    public static function createOperation($type)
     {
         $operator = null;
         switch ($type) {

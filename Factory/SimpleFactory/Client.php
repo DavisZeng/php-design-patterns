@@ -22,17 +22,17 @@ class Client
 {
     public static function main()
     {
-        $operator = OperationFactory::calc(OperationFactory::OPERATION_ADD);
+        $operator = OperationFactory::createOperation(OperationFactory::OPERATION_ADD);
         $operator->numberA = 29;
         $operator->numberB = 2013;
         echo "29 + 2013 = " . $operator->getResult() . "\n";
 
-        $operator = OperationFactory::calc(OperationFactory::OPERATION_SUB);
+        $operator = OperationFactory::createOperation(OperationFactory::OPERATION_SUB);
         $operator->numberA = 29;
         $operator->numberB = 2013;
         echo "29 - 2013 = " . $operator->getResult() . "\n";
 
-        $operator = OperationFactory::calc(OperationFactory::OPERATION_MUL);
+        $operator = OperationFactory::createOperation(OperationFactory::OPERATION_MUL);
         $operator->numberA = 29;
         $operator->numberB = 2013;
         echo "29 * 2013 = " . $operator->getResult() . "\n";
