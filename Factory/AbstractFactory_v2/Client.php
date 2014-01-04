@@ -8,36 +8,24 @@
  * Author: zengdewu <dewuzeng@gmail.com>
  */
 require_once("MobilePhoneFactory.php");
-require_once("IphoneFactory.php");
-require_once("AndroidFactory.php");
 require_once("Hardware.php");
 require_once("Software.php");
 require_once("IphoneHardware.php");
 require_once("AndroidHardware.php");
+require_once("BlackberryHardware.php");
 require_once("IphoneSoftware.php");
 require_once("AndroidSoftware.php");
+require_once("BlackberrySoftware.php");
+require_once("Reader.php");
 
 class Client 
 {
     public static function main()
     {
-        echo "---------------Iphone Factory-------------------\n";
-        $iphoneFactory = new IphoneFactory();
-
-        $hardware = $iphoneFactory->createHardware();
+        $hardware = MobilePhoneFactory::createHardware();
         $hardware->developHardware();
 
-        $software = $iphoneFactory->createSoftware();
-        $software->developSoftware();
-
-        echo "---------------Android Factory-------------------\n";
-
-        $androidFactory = new AndroidFactory();
-
-        $hardware = $androidFactory->createHardware();
-        $hardware->developHardware();
-
-        $software = $androidFactory->createSoftware();
+        $software = MobilePhoneFactory::createSoftware();
         $software->developSoftware();
     }
 }
