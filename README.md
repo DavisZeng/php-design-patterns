@@ -1,1 +1,3 @@
-# PHP设计模式(PHP Design Patterns) #
+# php-design-patterns
+
+Some design patterns implemented by PHP.
